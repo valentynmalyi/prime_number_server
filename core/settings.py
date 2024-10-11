@@ -5,6 +5,12 @@ SECRET_KEY = 'django-insecure-ad@%p2mg0(gc##0f+gtjbe!+z_g3&*j6@6dv#ldxx678a1ac4s
 DEBUG = True
 ALLOWED_HOSTS = []
 INSTALLED_APPS = [
+    'django.contrib.contenttypes',
+    'django.contrib.auth',
+    'django.contrib.staticfiles',
+
+    'rest_framework',
+
     'apps.number',
 ]
 
@@ -26,3 +32,12 @@ USE_I18N = True
 USE_TZ = True
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+TEMPLATES = [
+    {
+        'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        'APP_DIRS': True,
+    },
+]
+
+STATIC_URL = "static/"
